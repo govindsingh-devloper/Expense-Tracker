@@ -74,7 +74,8 @@ exports.showALLTransaction=async(req,res)=>{
             const allTransactions=await Transaction.find({},)
             return res.status(200).json({
                 success:true,
-                message:"Data For ALL transaction Fetched SuccessFully"
+                message:"Data For ALL transaction Fetched SuccessFully",
+                data:allTransactions
             })
         
     } catch (error) {
@@ -82,7 +83,7 @@ exports.showALLTransaction=async(req,res)=>{
         return res.status(500).json({
             success:false,
             message:"Failed To fetch Transactions",
-            data:allTransactions
+        
         })
         
     }
