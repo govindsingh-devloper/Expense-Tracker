@@ -71,9 +71,7 @@ exports.createTransaction=async(req,res)=>{
 //get ALL Transaction
 exports.showALLTransaction=async(req,res)=>{
     try {
-            const allTransactions=await Transaction.find({},{ category,description,ownerName,amount})
-                                                                         .populate("owername")
-                                                                          .exec();
+            const allTransactions=await Transaction.find({},)
             return res.status(200).json({
                 success:true,
                 message:"Data For ALL transaction Fetched SuccessFully"
@@ -83,7 +81,8 @@ exports.showALLTransaction=async(req,res)=>{
         console.log(error);
         return res.status(500).json({
             success:false,
-            message:"Failed To fetch Transactions"
+            message:"Failed To fetch Transactions",
+            data:allTransactions
         })
         
     }
