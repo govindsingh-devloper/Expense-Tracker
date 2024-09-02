@@ -26,7 +26,7 @@ const Analytics = ({allTransactions}) => {
     //total TurnOver
 
     const totalTurnover = allTransactions.reduce((acc, transaction) => acc + transaction.amount, 0);
-    console.log("TurnOver", totalTurnover);
+    // console.log("TurnOver", totalTurnover);
 
    
 

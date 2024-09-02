@@ -32,9 +32,9 @@ const handleOnSubmit = (e) => {
   dispatch(login(email, password, navigate))
 }
 return (
-<Layout>
-  <div className="flex  bg bg-custom-bg items-center justify-center h-screen">
-    <div className="w-full mx-auto p-4 max-w-sm rounded-lg shadow-2xl border">
+  
+  <div className="flex   items-center justify-center py-1">
+    <div className="w-full mx-auto p-4 max-w-md rounded-lg shadow-2xl border bg-custom-bg">
       <form
         onSubmit={handleOnSubmit}
         className="flex flex-col gap-y-4 bg-transparent"
@@ -99,7 +99,7 @@ return (
       </form>
     </div>
   </div>
-</Layout>
+
 
 );
 

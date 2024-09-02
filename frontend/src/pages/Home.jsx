@@ -188,9 +188,9 @@ const handleonDelete=async(record)=>{
     {
       loading && <div>Loading.......</div>
     }
-    <div className='flex bg-richblue-800 items-center justify-between px-4 py-3  rounded-lg'>
+    <div className='flex bg-richblue-800 items-center justify-between px-4 py-3  rounded-lg border'>
         {/* Filters */}
-        <div className='flex flex-col'>
+        <div className='flex flex-col '>
           <h6 className='text-lg font-semibold mb-2'>Select Frequency</h6>
           <Select 
             value={frequency} 
@@ -257,6 +257,7 @@ const handleonDelete=async(record)=>{
       </div>
 
       {/* Table Data */}
+      
       <div className='mt-6 p-4   rounded-lg'>
         {viewData === 'table' 
           ? <Table columns={columns} dataSource={allTransactions} /> 

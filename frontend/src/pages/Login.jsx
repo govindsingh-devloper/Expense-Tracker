@@ -8,8 +8,8 @@ const Login = () => {
     <Layout>
        <Template
       title="Welcome Back"
-      description1="Build skills for today, tomorrow, and beyond."
-      description2="Education to future-proof your career."
+      description1="Expenses Need to be Tracked."
+      description2="Track Your Transaction in a Visulize Manner."
       formType="login"
     />
     </Layout>

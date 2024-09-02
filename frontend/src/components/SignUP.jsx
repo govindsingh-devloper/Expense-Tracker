@@ -66,9 +66,11 @@ const SignUP = () => {
   }
   return (
 
-       <div className='bg-custom-bg border'>
+   <div className='bg-custom-bg border'>
   <div className="w-full max-w-md mx-auto p-4">
+    
     <form onSubmit={handleOnSubmit} className="flex flex-col gap-y-4">
+   
       <div className="flex gap-x-4">
         <label className="flex-1">
           <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">

@@ -4,7 +4,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import UpdatePassword from "./pages/UpdatePassword";
 import VerifyEmail from "./pages/VerifyEmail";
 import Home from "./pages/Home";
-import Login from "./components/Login";
+import Login from "./pages/Login";
 import SignUP from "./pages/SignUP";
 
 
