@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from "react"
 import { toast } from "react-hot-toast"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import Layout from './Layout/Layout'
 import { sendOtp } from '../services/authApi'
@@ -10,8 +10,9 @@ import { setSignupData } from '../slices/authsSice'
 
 const SignUP = () => {
   
-  const navigate = useNavigate()
-  const dispatch = useDispatch()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const {user}=useSelector((state)=>state.auth)
 
 
 
@@ -64,6 +65,16 @@ const SignUP = () => {
     })
  
   }
+
+  //prevent login user
+  useEffect(()=>{
+    if(user){
+      navigate('/');
+    }
+
+  },[navigate]);
+
+
   return (
 
    <div className='bg-custom-bg border'>

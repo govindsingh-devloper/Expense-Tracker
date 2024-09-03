@@ -1,7 +1,7 @@
 import React from 'react'
-import { useState } from "react"
+import { useState,useEffect} from "react"
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { Link, useNavigate } from "react-router-dom"
 import { login } from '../services/authApi'
 import Layout from './Layout/Layout'
@@ -9,8 +9,11 @@ import Layout from './Layout/Layout'
 
 
 const Login = () => {
-  const navigate = useNavigate()
-const dispatch = useDispatch()
+  
+const navigate = useNavigate();
+const dispatch = useDispatch();
+const {user}=useSelector((state)=>state.auth);
+
 const [formData, setFormData] = useState({
   email: "",
   password: "",
@@ -31,6 +34,15 @@ const handleOnSubmit = (e) => {
   e.preventDefault()
   dispatch(login(email, password, navigate))
 }
+
+ //prevent login user
+ useEffect(()=>{
+  if(user){
+    navigate('/');
+  }
+
+},[navigate]);
+
 return (
   
   <div className="flex   items-center justify-center py-1">

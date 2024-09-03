@@ -35,6 +35,9 @@ const Header = () => {
               </Link>
             </>
           )}
+
+       <div className='flex items-center space-x-4'>
+       <p className='text-white'>{user && user.firstName}</p>
           {token !== null && (
             <button
               className="rounded-[8px] bg-red-500 border border-red-700 px-[12px] py-[8px] text-white hover:bg-red-600"
@@ -43,6 +46,7 @@ const Header = () => {
               Logout
             </button>
           )}
+       </div>
         </div>
       </div>
     </nav>

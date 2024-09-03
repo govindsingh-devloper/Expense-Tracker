@@ -6,6 +6,7 @@ import VerifyEmail from "./pages/VerifyEmail";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUP from "./pages/SignUP";
+import PrivateRoute from "./components/common/PrivateRoute"
 
 
 
@@ -14,7 +15,7 @@ function App() {
   <>
     <Routes>
     
-      <Route path="/" element={<Home/>}/>
+      <Route path="/" element={<PrivateRoute><Home/></PrivateRoute>}/>
      <Route path="/login" element={<Login/>}/>
      <Route path="/signup" element={<SignUP/>}/>
       <Route path="forgot-password" element={<ForgotPassword/>}/>

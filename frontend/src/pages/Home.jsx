@@ -233,15 +233,20 @@ const handleonDelete=async(record)=>{
         </div>
 
         {/* Icons */}
-        <div className='flex items-center space-x-4'>
-          <AiOutlineUnorderedList 
-            className='text-2xl cursor-pointer hover:text-blue-600 transition-colors' 
+        <div className='flex flex-col '>
+       
+        <h1 className='text-lg font-semibold mb-2'>Analytics</h1>
+         <div className='flex space-x-4 justify-center  border rounded-lg '>
+         <AiOutlineUnorderedList 
+            
+            className='text-2xl cursor-pointer hover:text-blue-600 transition-colors w-full mb-2' 
             onClick={() => setViewData('table')} 
           />
           <AiOutlineAreaChart 
-            className='text-2xl cursor-pointer hover:text-green-600 transition-colors' 
+            className='text-2xl cursor-pointer hover:text-green-600 transition-colors w-full mb-2' 
             onClick={() => setViewData('Analytics')} 
           />
+         </div>
         </div>
 
         {/* Add New Button */}
