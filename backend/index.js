@@ -24,7 +24,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin:"*",
+        origin:"https://expense-tracker-1-uvvc.onrender.com",
         credentials:true
     })
 )
