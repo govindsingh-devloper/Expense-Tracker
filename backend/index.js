@@ -24,7 +24,7 @@ app.use(cookieParser());
 
 app.use(
     cors({
-        origin:"http://localhost:3000",
+        origin:"'https://expense-tracker-frontend-murex.vercel.app'",
         credentials:true
     })
 )
